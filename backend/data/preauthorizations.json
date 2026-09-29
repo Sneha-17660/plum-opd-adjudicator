@@ -1,0 +1,12 @@
+{
+  "_comment": "Synthetic pre-authorization registry. A pre-auth is only honoured if its reference exists here for the same member.",
+  "preauthorizations": [
+    {
+      "reference": "PA-OPD-00042",
+      "member_id": "EMP003",
+      "procedure": "MRI",
+      "valid_from": "2024-01-01",
+      "valid_to": "2027-12-31"
+    }
+  ]
+}

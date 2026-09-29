@@ -1,0 +1,75 @@
+{
+  "_comment": "Synthetic member registry (trusted source of truth for eligibility). All people are fictional and match data/test_cases.json.",
+  "members": {
+    "EMP001": {
+      "member_name": "Rajesh Kumar",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP002": {
+      "member_name": "Priya Singh",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP003": {
+      "member_name": "Amit Verma",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP004": {
+      "member_name": "Sneha Reddy",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP005": {
+      "member_name": "Vikram Joshi",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-09-01",
+      "pre_existing_conditions": []
+    },
+    "EMP006": {
+      "member_name": "Kavita Nair",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP007": {
+      "member_name": "Suresh Patil",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP008": {
+      "member_name": "Ravi Menon",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP009": {
+      "member_name": "Anita Desai",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    },
+    "EMP010": {
+      "member_name": "Deepak Shah",
+      "policy_id": "PLUM_OPD_2024",
+      "active": true,
+      "join_date": "2024-01-01",
+      "pre_existing_conditions": []
+    }
+  }
+}

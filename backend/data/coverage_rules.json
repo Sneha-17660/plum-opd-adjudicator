@@ -1,0 +1,330 @@
+{
+  "_comment": "Operational interpretation of policy_terms.json. policy_terms.json holds the supplied numbers; this file holds the vocabulary the engine uses to map document facts onto those terms. See docs/assumptions.md for the reasoning behind each choice.",
+  "category_keywords": {
+    "dental": [
+      "dental",
+      "dentist",
+      "tooth",
+      "teeth",
+      "root canal",
+      "rct",
+      "filling",
+      "crown",
+      "scaling",
+      "whitening",
+      "orthodontic",
+      "braces"
+    ],
+    "vision": [
+      "eye test",
+      "eye examination",
+      "spectacle",
+      "glasses",
+      "contact lens",
+      "lasik",
+      "optical",
+      "refraction",
+      "vision"
+    ],
+    "alternative": [
+      "ayurveda",
+      "ayurvedic",
+      "panchakarma",
+      "abhyanga",
+      "shirodhara",
+      "homeopathy",
+      "homeopathic",
+      "unani",
+      "vaidya"
+    ],
+    "diagnostic": [
+      "test",
+      "tests",
+      "cbc",
+      "blood",
+      "urine",
+      "x ray",
+      "xray",
+      "ecg",
+      "ekg",
+      "ultrasound",
+      "usg",
+      "mri",
+      "ct scan",
+      "scan",
+      "lab",
+      "laboratory",
+      "pathology",
+      "dengue",
+      "lipid",
+      "thyroid",
+      "hba1c",
+      "culture",
+      "radiology",
+      "investigation",
+      "investigations",
+      "diagnostic"
+    ],
+    "pharmacy": [
+      "medicine",
+      "medicines",
+      "pharmacy",
+      "drug",
+      "drugs",
+      "tablet",
+      "tab",
+      "capsule",
+      "cap",
+      "syrup",
+      "injection",
+      "ointment",
+      "pharma"
+    ],
+    "consultation": [
+      "consultation",
+      "consult",
+      "doctor fee",
+      "doctors fee",
+      "opd fee",
+      "visit fee",
+      "opd charges",
+      "opd"
+    ]
+  },
+  "category_order": [
+    "dental",
+    "vision",
+    "alternative",
+    "diagnostic",
+    "pharmacy",
+    "consultation"
+  ],
+  "specialty_categories": [
+    "dental",
+    "vision",
+    "alternative"
+  ],
+  "alternative_registration_prefixes": [
+    "AYUR",
+    "HOM",
+    "UNANI",
+    "BAMS",
+    "BHMS"
+  ],
+  "sub_limit_keys": {
+    "consultation": "consultation_fees",
+    "diagnostic": "diagnostic_tests",
+    "pharmacy": "pharmacy",
+    "dental": "dental",
+    "vision": "vision",
+    "alternative": "alternative_medicine"
+  },
+  "per_claim_limit_applies_to": [
+    "consultation",
+    "pharmacy"
+  ],
+  "copay_applies_to": [
+    "consultation"
+  ],
+  "exclusions": [
+    {
+      "name": "Cosmetic procedures",
+      "label": "cosmetic procedure",
+      "keywords": [
+        "cosmetic",
+        "whitening",
+        "bleaching",
+        "botox",
+        "hair transplant",
+        "liposuction",
+        "aesthetic",
+        "veneer",
+        "filler"
+      ]
+    },
+    {
+      "name": "Weight loss treatments",
+      "label": "weight loss treatment",
+      "keywords": [
+        "weight loss",
+        "weight reduction",
+        "bariatric",
+        "slimming",
+        "diet plan",
+        "obesity management"
+      ]
+    },
+    {
+      "name": "Infertility treatments",
+      "label": "infertility treatment",
+      "keywords": [
+        "infertility",
+        "ivf",
+        "iui",
+        "in vitro fertilisation",
+        "in vitro fertilization"
+      ]
+    },
+    {
+      "name": "Experimental treatments",
+      "label": "experimental treatment",
+      "keywords": [
+        "experimental",
+        "investigational",
+        "clinical trial"
+      ]
+    },
+    {
+      "name": "Self-inflicted injuries",
+      "label": "self-inflicted injury",
+      "keywords": [
+        "self inflicted"
+      ]
+    },
+    {
+      "name": "Adventure sports injuries",
+      "label": "adventure sports injury",
+      "keywords": [
+        "paragliding",
+        "bungee",
+        "skydiving",
+        "rock climbing",
+        "scuba",
+        "adventure sport"
+      ]
+    },
+    {
+      "name": "War and nuclear risks",
+      "label": "war/nuclear risk",
+      "keywords": [
+        "war injury",
+        "nuclear accident"
+      ]
+    },
+    {
+      "name": "HIV/AIDS treatment",
+      "label": "HIV/AIDS treatment",
+      "type": "condition",
+      "keywords": [
+        "hiv",
+        "antiretroviral"
+      ]
+    },
+    {
+      "name": "Alcoholism/drug abuse treatment",
+      "label": "de-addiction treatment",
+      "type": "condition",
+      "keywords": [
+        "alcoholism",
+        "alcohol dependence",
+        "de addiction",
+        "deaddiction",
+        "substance abuse",
+        "drug abuse"
+      ]
+    },
+    {
+      "name": "Non-allopathic treatments (except listed)",
+      "label": "non-listed alternative therapy",
+      "keywords": [
+        "naturopathy",
+        "acupuncture",
+        "reiki",
+        "magnetotherapy",
+        "siddha",
+        "cupping"
+      ]
+    },
+    {
+      "name": "Vitamins and supplements (unless prescribed for deficiency)",
+      "label": "vitamin/supplement",
+      "item_only": true,
+      "keywords": [
+        "vitamin",
+        "multivitamin",
+        "supplement",
+        "protein powder"
+      ],
+      "unless_diagnosis_mentions": [
+        "deficiency"
+      ]
+    }
+  ],
+  "waiting_period_conditions": {
+    "diabetes": {
+      "policy_key": "specific_ailments.diabetes",
+      "label": "Diabetes",
+      "keywords": [
+        "diabetes",
+        "diabetic",
+        "diabetes mellitus",
+        "t2dm",
+        "t1dm"
+      ]
+    },
+    "hypertension": {
+      "policy_key": "specific_ailments.hypertension",
+      "label": "Hypertension",
+      "keywords": [
+        "hypertension",
+        "high blood pressure",
+        "htn"
+      ]
+    },
+    "joint_replacement": {
+      "policy_key": "specific_ailments.joint_replacement",
+      "label": "Joint replacement",
+      "keywords": [
+        "joint replacement",
+        "knee replacement",
+        "hip replacement",
+        "arthroplasty"
+      ]
+    },
+    "maternity": {
+      "policy_key": "maternity",
+      "label": "Maternity",
+      "keywords": [
+        "pregnancy",
+        "pregnant",
+        "antenatal",
+        "maternity",
+        "obstetric",
+        "prenatal"
+      ]
+    }
+  },
+  "pre_authorization": {
+    "amount_threshold": 10000,
+    "procedures": [
+      {
+        "name": "MRI",
+        "keywords": [
+          "mri",
+          "magnetic resonance"
+        ]
+      },
+      {
+        "name": "CT scan",
+        "keywords": [
+          "ct scan",
+          "ct",
+          "cat scan",
+          "computed tomography",
+          "hrct",
+          "cect"
+        ]
+      }
+    ]
+  },
+  "risk": {
+    "same_day_previous_claims_threshold": 3,
+    "claims_last_30_days_threshold": 6,
+    "high_value_manual_review_above": 25000,
+    "minimum_confidence": 0.7,
+    "illegible_below": 0.35,
+    "low_legibility_below": 0.6,
+    "medical_concern_min_confidence": 0.7,
+    "amount_tolerance_inr": 1.0
+  }
+}

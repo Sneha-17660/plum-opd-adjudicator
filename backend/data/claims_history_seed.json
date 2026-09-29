@@ -1,0 +1,26 @@
+{
+  "_comment": "Synthetic prior-claims history loaded into the claim store at startup so history-based fraud checks can be demonstrated. treatment_days_ago is resolved against the server date at startup.",
+  "claims": [
+    {
+      "member_id": "EMP008",
+      "treatment_days_ago": 3,
+      "provider": "City Care Clinic",
+      "amount": 1500,
+      "decision": "APPROVED"
+    },
+    {
+      "member_id": "EMP008",
+      "treatment_days_ago": 3,
+      "provider": "Metro Diagnostics",
+      "amount": 1200,
+      "decision": "APPROVED"
+    },
+    {
+      "member_id": "EMP008",
+      "treatment_days_ago": 3,
+      "provider": "Wellness Pharmacy",
+      "amount": 900,
+      "decision": "APPROVED"
+    }
+  ]
+}
