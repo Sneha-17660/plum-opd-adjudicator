@@ -4,6 +4,16 @@ AI-assisted OPD insurance claim adjudication with a **multi-agent evidence pipel
 
 > **AI reads. Rules decide. People review uncertainty.**
 
+## System Architecture
+
+The system follows a multi-agent evidence pipeline in which AI is used for
+document understanding and evidence extraction, while the deterministic
+Policy Engine remains the final authority for claim decisions.
+
+> **AI reads. Rules decide. People review uncertainty.**
+
+![Plum OPD Claim Adjudicator - System Architecture](docs/architecture(2).png)
+
 ## How a claim is processed
 
 ```
@@ -24,6 +34,23 @@ SQLite claim store + full audit trace
 ```
 
 The LLM agents (2, 3, 5) only produce evidence. They cannot approve, reject or change a rule. Signals from LLM agents can only **escalate** a claim to `MANUAL_REVIEW`.
+
+## Claim Decision Flow
+
+The adjudication workflow evaluates eligibility, document validity, coverage,
+policy limits, medical and risk signals, and applicable deductions before
+returning an explainable claim decision.
+
+The system supports four outcomes:
+
+| Decision | Meaning |
+|---|---|
+| `APPROVED` | Claim is payable after applicable policy rules. |
+| `PARTIAL` | Part of the claim is payable while exclusions or limits reduce the amount. |
+| `REJECTED` | A hard policy condition prevents payment. |
+| `MANUAL_REVIEW` | Risk, uncertainty, or low-confidence evidence requires human review. |
+
+![Plum OPD Claim Adjudicator - Claim Decision Flow](docs/decision-flow(2).png)
 
 ## Decisions
 
