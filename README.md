@@ -34,10 +34,36 @@ The LLM agents (2, 3, 5) only produce evidence. They cannot approve, reject or c
 | `REJECTED` | A hard policy condition prevents payment. |
 | `MANUAL_REVIEW` | Risk signal, low-confidence extraction or uncertainty; a human must decide. |
 
-## Live demo
+## Demo / Sample Member Data
 
-- **Frontend (Vercel):** _set your URL here_
-- **Backend API (Render):** _set your URL here_ (`/docs` for Swagger)
+For demonstration and reproducible testing, this project includes a small
+synthetic member registry (`EMP001`–`EMP010`).
+
+These records are sample policy/member data used to demonstrate the
+end-to-end claims adjudication workflow, including eligibility verification,
+document validation, policy exclusions, limits, co-pay calculations,
+fraud/risk checks, and explainable decisions.
+
+The `EMP001`–`EMP010` records are **not intended to represent a limitation
+on the number of members or claims supported by the platform**. They are
+controlled synthetic records provided for testing and demonstration of the
+platform.
+
+The acceptance test cases are also synthetic fixtures representing
+different adjudication scenarios. In a production deployment, the synthetic
+member registry and test fixtures would be replaced or integrated with the
+insurer's actual member, policy, and claims data sources.
+
+## Live Demo
+
+**Frontend:**  
+https://plum-opd-claim-adjudicator-9919.vercel.app
+
+**Backend API:**  
+https://plum-opd-adjudicator.onrender.com
+
+**Swagger API Documentation:**  
+https://plum-opd-adjudicator.onrender.com/docs
 
 If the Render service has gone to sleep, the first request takes ~30 seconds. The frontend shows a "starting" banner while it waits.
 
